@@ -1,0 +1,93 @@
+.amount-chooser {
+  margin: 0.5em auto;
+  width: 85%;
+}
+
+.amount-chooser label {
+    height: 55px;
+    margin: 1%;
+    float: left;
+    color: $grey;
+    text-align: center;
+    width: 31%;
+    border-radius: 4px;
+}
+
+.amount-chooser label:hover {
+    border: 1px solid lighten($color, 20%);
+    color: $grey;
+}
+
+.amount-chooser label span {
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding: 15px 0;
+    display: block;
+}
+
+.amount-chooser label input {
+    display: none;
+    left: 0;
+    top: -10px;
+}
+
+.amount-chooser input:checked + span {
+    color: lighten($color, 20%);
+    border: 1px solid lighten($color, 20%);
+    border-radius: 4px;
+    height: 55px;
+}
+
+/* Hide HTML5 Up and Down arrows in input type="number" */
+.amount-chooser input[type=number] {-moz-appearance: textfield;}
+.amount-chooser input[type=number]::-webkit-inner-spin-button,
+.amount-chooser input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+.amount-chooser  .textBox {
+    margin: 1%;
+    height: 55px;
+    float: left;
+    background: #fff;
+    color: $grey;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 64%;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For all Gecko based browsers */
+    box-sizing: border-box;
+}
+
+.amount-chooser .textBox:focus {
+    border: 1px solid lighten($color, 20%);
+    border-radius: 4px;
+    color: lighten($color, 20%);
+    outline: none;
+}
+
+#wire-transfer {
+  height: 55px;
+  padding: 15px 0;
+}
+
+.wire-hidden {
+  display: none;
+  background-color: lighten($grey, 40%);
+  border-radius: 4px;
+  padding: 1.5em 0;
+  color: darken($color, 30%);
+}
+
+.paypal-powered-by {
+  display:none !important;
+}

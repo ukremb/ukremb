@@ -1,0 +1,317 @@
+---
+# Do not remove the triple dashes
+---
+@charset "utf-8";
+
+//
+// Set color scheme
+//
+
+{% if site.color_scheme == "one" %}
+  $color: #243dff;
+  $color-2: #ffe73c;
+{% elsif site.color_scheme == "two" %}
+  $color: #b4ca65;
+  $color-2: #dd7c4f;
+{% elsif site.color_scheme == "three" %}
+  $color: #6690b9;
+  $color-2: #f46fa3;
+{% elsif site.color_scheme == "four" %}
+  $color: #50c8c9;
+  $color-2: #ffbe57;
+{% else %}
+  $color: #6690b9;
+  $color-2: #dd9d71;
+{% endif %}
+
+//
+// Import partials from `_sass` folder
+//
+
+@import "default";
+@import "form";
+
+//
+// Insert custom css below this line
+//
+
+.promo,
+.contact {
+  background: linear-gradient(90deg, $color 0%, darken($color, 15%) 50%, $color 100%);
+}
+
+.contact h2 {
+  color: $color-2 !important;
+}
+
+.promo .bottom-title {
+  padding-top: 0.5em;
+}
+
+.promo .top-title {
+  padding-bottom: 0.5em;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+.logo-title:hover {
+  text-decoration: none;
+}
+.promo .title {
+  font-size: 65px;
+  color: $color;
+  margin-top: 0;
+}
+.btns {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.promo .meta {
+    margin-top: 30px;
+}
+.donorbox {
+  margin-top: 60px;
+}
+.join-us-intro {
+  margin-top: 0;
+  color: #ddd !important;
+}
+.highlight {
+  color: $color-2 !important;
+}
+.promo .social-icons a {
+    display: inline-block;
+    background: darken($color, 20%);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    padding-top: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-right: 8px;
+    float: left;
+}
+
+.btn-container {
+  margin: 0px auto 60px;
+  max-width: 85%;
+}
+
+.donate .form-heading {
+  color: darken($color, 30%);
+}
+
+
+.donate .amount-selection {
+  text-align: left;
+}
+
+.speech-bubble {
+  display: none;
+}
+
+.speech-bubble div.icon-holder {
+  display: none;
+}
+
+.btn-outline, .btn-outline:link, .btn-outline:visited {
+    background-color: transparent;
+    border-radius: 5px;
+    &.btn-outline-primary {
+      border: 2px solid $color;
+      color: $color;
+    }
+    &.btn-outline-secondary {
+      border: 2px solid $color-2;
+      color: $color-2;
+    }
+    &.btn-outline-medium {
+      border: 2px solid darken($color-2, 15%);
+      color: darken($color-2, 15%);
+    }
+}
+.btn-outline:hover {
+    color: #fff !important;
+    &.btn-outline-primary {
+      background-color: $color;
+    }
+    &.btn-outline-secondary {
+      background-color: $color-2;
+    }
+    &.btn-outline-medium {
+      background-color: darken($color-2, 15%);
+    }
+}
+
+
+.features .form-inline {
+  margin-top: 10px;
+}
+
+.contact .info .sub-title {
+  color: $color-2;
+}
+
+.contact .img-fluid,
+.wire-hidden .img-fluid {
+  width: 10vw;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 1em;
+}
+
+.contact a {
+  color: $color-2;
+}
+
+
+@media only screen and (min-width: 300px) {
+  .promo img {
+    height: 36vw;
+    width: 36vw;
+  }
+
+  .promo .h2-responsive {
+    font-size: 7vw;
+  }
+
+  .contact .img-fluid,
+  .wire-hidden .img-fluid {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .promo img {
+    height: 30vw;
+    width: 30vw;
+  }
+
+  .promo .h2-responsive {
+    font-size: 6vw;
+  }
+
+  .contact .img-fluid,
+  .wire-hidden .img-fluid {
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .promo img {
+    height: 24vw;
+    width: 24vw;
+  }
+
+  .promo .h2-responsive {
+    font-size: 5vw;
+  }
+
+  .contact .img-fluid {
+    width: 30vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .promo img {
+    height: 18vw;
+    width: 18vw;
+  }
+
+  .promo .h2-responsive {
+    font-size: 4vw;
+  }
+
+  .contact .img-fluid,
+  .wire-hidden .img-fluid {
+    width: 20vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .promo img {
+    height: 10vw;
+    width: 10vw;
+  }
+
+  .promo .h2-responsive {
+    font-size: 2vw;
+  }
+
+  .contact .img-fluid,
+  .wire-hidden .img-fluid {
+    width: 10vw;
+  }
+}
+
+
+// Header Animations
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
