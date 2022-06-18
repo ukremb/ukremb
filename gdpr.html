@@ -1,0 +1,331 @@
+---
+layout: default
+---
+<!-- ******HEADER****** -->
+<header id="header" class="header">
+  <div class="container">
+    <h1 class="logo pull-left">
+      <a href="{{ site.base_address }}">
+        <span class="logo-title">{{ site.org_site_title }}</span>
+      </a>
+    </h1><!--//logo-->
+    <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Open menu</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button><!--//nav-toggle-->
+      </div><!--//navbar-header-->
+      <div class="navbar-collapse collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+          <!--<li class="nav-item"><a class="scrollto" href="#about">About</a></li>-->
+          <!--<li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>-->
+          <li class="nav-item last"><a class="scrollto highlight" href="#donate">Donate</a></li>
+          <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
+        </ul><!--//nav-->
+      </div><!--//navabr-collapse-->
+    </nav><!--//main-nav-->
+  </div>
+</header><!--//header-->
+
+<!-- ******PROMO****** -->
+<section id="promo" class="promo section offset-header">
+  <div class="container text-center">
+    <h2 class="title h2-responsive slideInLeft top-title"><span class="highlight">{{ site.org_site_title }}</span></h2>
+    <div class="center"><img src="assets/img/qr-code.png" alt="Donate for Ukraine"></div>
+    <h2 class="title h2-responsive slideInRight bottom-title"><span class="highlight">{{ site.org_site_title_second}}</span></h2>
+    <p class="intro">{{ site.org_summary }}</p>
+    <div class="btns">
+      <!--a class="btn btn-cta-secondary" href="#" target="_blank">Demo</a-->
+      <a class="btn btn-outline btn-outline-medium scrollto" href="#donate" target="_blank">Donates <i class="fa fa-angle-double-down"></i></a>
+    </div>
+    <ul class="meta list-inline">
+      <li></li>
+    </ul><!--//meta-->
+  </div><!--//container-->
+  <div class="social-media">
+    <div class="info text-center">
+      <ul class="social-icons list-inline">
+{% comment %}
+        {% if site.org_twitter_username %}
+        <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        {% endif %}
+        {% if site.org_facebook_username %}
+        <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        {% endif %}
+        {% if site.org_instagram_username %}
+        <li><a href="http://instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a></li>
+        {% endif %}
+        {% if site.org_general_email_inbox %}
+        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
+        {% endif %}
+{% endcomment %}
+      </ul>
+    </div>
+  </div>
+</section><!--//promo-->
+
+<!-- ******ABOUT****** -->
+<!-- <section id="about" class="about section">
+  <div class="container">
+    <h2 class="title text-center">About Us</h2>
+    <p class="intro text-center">{{ site.org_full_description }}</p>
+  </div>--><!--//container-->
+<!--</section>-->
+<!--//about-->
+
+<!-- ******JOIN****** -->
+<!--<section id="join" class="join section">
+  <div class="container text-center">
+    <h2 class="title">Join Us</h2>
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+        <h1 class="join-us-intro">We Need Your Voice.<br> Join Us!</h1>
+      </div>
+      <div class="col-sm-5 text-left text-left-sm">
+        <p>Sign up to receive updates, progress reports and ways to get involved. We're excited to have you join our amazing community!</p>
+        {% if site.tinyletter_username %}
+        <p><em>No spam. Just the occasional update.</em></p>
+        <div class="row">
+          <div class="col-sm-12">
+            <form class="form-inline" role="form" action="https://tinyletter.com/{{ site.tinyletter_username }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+              <div class="input-group input-group-lg col-sm-12">
+                <label class="sr-only" for="tlemail">Email address</label>
+                <input type="email" class="form-control" name="email" id="tlemail" placeholder="email address" />
+                <div class="input-group-btn">
+                  <button type="submit" class="button btn btn-cta-secondary">Join Us!</button>
+                </div><!-- /btn-group -->
+              <!--</div>--><!-- /input-group -->
+            <!--</form>
+          </div>
+        </div>
+        {% elsif site.mailchimp_embed_code %}
+        <p><em>No spam. Just the occasional update.</em></p>
+        <div id="mc_embed_signup">
+          <form action="{{ site.mailchimp_embed_code }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate bs-component" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <div class="form-group">
+                <label for="mce-EMAIL" class="sr-only">Email Address</label>
+                <input placeholder="email address" type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="mce-FNAME" class="sr-only">Given / First Name </label>
+                    <input placeholder="given / first name" type="text" value="" name="FNAME" class="form-control" id="mce-FNAME">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="mce-LNAME" class="sr-only">Family / Last Name </label>
+                    <input placeholder="family / last name" type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
+                  </div>
+                </div>
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>-->
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <!--<div style="position: absolute; left: -5000px;"><input type="text" name="{{ site.mailchimp_spam_guard }}" tabindex="-1" value=""></div>
+              <div class="clear">
+
+                <input type="submit" value="Join Us!" name="subscribe" id="mc-embedded-subscribe" class="button btn-success btn-block btn" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>-->
+        <!--End mc_embed_signup-->
+        <!--{% else %}
+        <p><em>Sorry, email signup is not available at this time <i class="fa fa-frown-o"></i></em></p>
+        {% endif %}-->
+
+        <!--form style="padding:3px;text-align:center;" action="https://tinyletter.com/{{ site.tinyletter_username }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to Updates</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" data-behavior="placeholder" placeholder="Email Address" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form-->
+
+
+      <!--</div>
+    </div>
+  </div>--><!--//container-->
+<!--</section>--><!--//join-->
+
+<!-- ******DONATE****** -->
+<section id="donate" class="donate section text-center">
+  <div class="container">
+    <div class="donate-inner">
+      <h2 class="title text-center">Datenschutzerklärung</h2>
+      <div class="info">
+        <h2 id="einleitung-ueberblick" class="adsimple-112054380">Einleitung und Überblick</h2>
+        <p>Wir haben diese Datenschutzerklärung (Fassung 18.06.2022-112054380) verfasst, um Ihnen gemäß der Vorgaben der <a class="adsimple-112054380" href="https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&amp;from=DE&amp;tid=112054380#d1e2269-1-1" target="_blank" rel="noopener">Datenschutz-Grundverordnung (EU) 2016/679</a> und anwendbaren nationalen Gesetzen zu erklären, welche personenbezogenen Daten (kurz Daten) wir als Verantwortliche &#8211; und die von uns beauftragten Auftragsverarbeiter (z. B. Provider) &#8211; verarbeiten, zukünftig verarbeiten werden und welche rechtmäßigen Möglichkeiten Sie haben. Die verwendeten Begriffe sind geschlechtsneutral zu verstehen.<br />
+        <strong class="adsimple-112054380">Kurz gesagt:</strong> Wir informieren Sie umfassend über Daten, die wir über Sie verarbeiten.</p>
+        <p>Datenschutzerklärungen klingen für gewöhnlich sehr technisch und verwenden juristische Fachbegriffe. Diese Datenschutzerklärung soll Ihnen hingegen die wichtigsten Dinge so einfach und transparent wie möglich beschreiben. Soweit es der Transparenz förderlich ist, werden technische <strong class="adsimple-112054380">Begriffe leserfreundlich erklärt</strong>, Links zu weiterführenden Informationen geboten und <strong class="adsimple-112054380">Grafiken</strong> zum Einsatz gebracht. Wir informieren damit in klarer und einfacher Sprache, dass wir im Rahmen unserer Geschäftstätigkeiten nur dann personenbezogene Daten verarbeiten, wenn eine entsprechende gesetzliche Grundlage gegeben ist. Das ist sicher nicht möglich, wenn man möglichst knappe, unklare und juristisch-technische Erklärungen abgibt, so wie sie im Internet oft Standard sind, wenn es um Datenschutz geht. Ich hoffe, Sie finden die folgenden Erläuterungen interessant und informativ und vielleicht ist die eine oder andere Information dabei, die Sie noch nicht kannten.<br />
+        Wenn trotzdem Fragen bleiben, möchten wir Sie bitten, sich an die unten bzw. im Impressum genannte verantwortliche Stelle zu wenden, den vorhandenen Links zu folgen und sich weitere Informationen auf Drittseiten anzusehen. Unsere Kontaktdaten finden Sie selbstverständlich auch im Impressum.</p>
+        <h2 id="anwendungsbereich" class="adsimple-112054380">Anwendungsbereich</h2>
+        <p>Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten und für alle personenbezogenen Daten, die von uns beauftragte Firmen (Auftragsverarbeiter) verarbeiten. Mit personenbezogenen Daten meinen wir Informationen im Sinne des Art. 4 Nr. 1 DSGVO wie zum Beispiel Name, E-Mail-Adresse und postalische Anschrift einer Person. Die Verarbeitung personenbezogener Daten sorgt dafür, dass wir unsere Dienstleistungen und Produkte anbieten und abrechnen können, sei es online oder offline. Der Anwendungsbereich dieser Datenschutzerklärung umfasst:</p>
+        <ul class="adsimple-112054380">
+        <li class="adsimple-112054380">alle Onlineauftritte (Websites, Onlineshops), die wir betreiben</li>
+        <li class="adsimple-112054380">Social Media Auftritte und E-Mail-Kommunikation</li>
+        <li class="adsimple-112054380">mobile Apps für Smartphones und andere Geräte</li>
+        </ul>
+        <p>
+        <strong class="adsimple-112054380">Kurz gesagt:</strong> Die Datenschutzerklärung gilt für alle Bereiche, in denen personenbezogene Daten im Unternehmen über die genannten Kanäle strukturiert verarbeitet werden. Sollten wir außerhalb dieser Kanäle mit Ihnen in Rechtsbeziehungen eintreten, werden wir Sie gegebenenfalls gesondert informieren.</p>
+        <h2 id="rechtsgrundlagen" class="adsimple-112054380">Rechtsgrundlagen</h2>
+        <p>In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen zu den rechtlichen Grundsätzen und Vorschriften, also den Rechtsgrundlagen der Datenschutz-Grundverordnung, die uns ermöglichen, personenbezogene Daten zu verarbeiten.<br />
+        Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES RATES vom 27. April 2016. Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich online auf EUR-Lex, dem Zugang zum EU-Recht, unter <a class="adsimple-112054380" href="https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679">https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679</a> nachlesen.</p>
+        <p>Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:</p>
+        <ol>
+        <li class="adsimple-112054380">
+        <strong class="adsimple-112054380">Einwilligung</strong> (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung gegeben, Daten zu einem bestimmten Zweck zu verarbeiten. Ein Beispiel wäre die Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.</li>
+        <li class="adsimple-112054380">
+        <strong class="adsimple-112054380">Vertrag</strong> (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag oder vorvertragliche Verpflichtungen mit Ihnen zu erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen wir vorab personenbezogene Informationen.</li>
+        <li class="adsimple-112054380">
+        <strong class="adsimple-112054380">Rechtliche Verpflichtung</strong> (Artikel 6 Absatz 1 lit. c DSGVO): Wenn wir einer rechtlichen Verpflichtung unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel sind wir gesetzlich verpflichtet Rechnungen für die Buchhaltung aufzuheben. Diese enthalten in der Regel personenbezogene Daten.</li>
+        <li class="adsimple-112054380">
+        <strong class="adsimple-112054380">Berechtigte Interessen</strong> (Artikel 6 Absatz 1 lit. f DSGVO): Im Falle berechtigter Interessen, die Ihre Grundrechte nicht einschränken, behalten wir uns die Verarbeitung personenbezogener Daten vor. Wir müssen zum Beispiel gewisse Daten verarbeiten, um unsere Website sicher und wirtschaftlich effizient betreiben zu können. Diese Verarbeitung ist somit ein berechtigtes Interesse.</li>
+        </ol>
+        <p>Weitere Bedingungen wie die Wahrnehmung von Aufnahmen im öffentlichen Interesse und Ausübung öffentlicher Gewalt sowie dem Schutz lebenswichtiger Interessen treten bei uns in der Regel nicht auf. Soweit eine solche Rechtsgrundlage doch einschlägig sein sollte, wird diese an der entsprechenden Stelle ausgewiesen.</p>
+        <p>Zusätzlich zu der EU-Verordnung gelten auch noch nationale Gesetze:</p>
+        <ul class="adsimple-112054380">
+        <li class="adsimple-112054380">In <strong class="adsimple-112054380">Österreich</strong> ist dies das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten (<strong class="adsimple-112054380">Datenschutzgesetz</strong>), kurz <strong class="adsimple-112054380">DSG</strong>.</li>
+        <li class="adsimple-112054380">In <strong class="adsimple-112054380">Deutschland</strong> gilt das <strong class="adsimple-112054380">Bundesdatenschutzgesetz</strong>, kurz<strong class="adsimple-112054380"> BDSG</strong>.</li>
+        </ul>
+        <p>Sofern weitere regionale oder nationale Gesetze zur Anwendung kommen, informieren wir Sie in den folgenden Abschnitten darüber.</p>
+        <h2 id="kontaktdaten-verantwortliche" class="adsimple-112054380">Kontaktdaten des Verantwortlichen</h2>
+        <p>Sollten Sie Fragen zum Datenschutz oder zur Verarbeitung personenbezogener Daten haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw. Stelle:<br />
+        <span class="adsimple-112054380" style="font-weight: 400">Botschaft der Ukraine in der Republik Österreich<br />
+        Volodymyr Kolomiiets<br />
+        Naaffgasse 23,  Wien, 1180 Österreich<br />
+        Tel: +43 1 479 7172<br />
+        https://austria.mfa.gov.ua </span>
+        <br />
+        <span style="font-weight: 400">Vertretungsberechtigt: Volodymyr Kolomiiets</span>
+        <br />
+        E-Mail: <a href="mailto:wien.embassy.ua@gmail.com">wien.embassy.ua@gmail.com</a>
+        <br />
+        Telefon: <a href="tel:+43 1 479 7172"> +43 1 479 7172</a>
+        <br />
+        Impressum: <a href="https://austria.mfa.gov.ua/">https://austria.mfa.gov.ua/</a>
+        </p>
+        <h2 id="speicherdauer" class="adsimple-112054380">Speicherdauer</h2>
+        <p>Dass wir personenbezogene Daten nur so lange speichern, wie es für die Bereitstellung unserer Dienstleistungen und Produkte unbedingt notwendig ist, gilt als generelles Kriterium bei uns. Das bedeutet, dass wir personenbezogene Daten löschen, sobald der Grund für die Datenverarbeitung nicht mehr vorhanden ist. In einigen Fällen sind wir gesetzlich dazu verpflichtet, bestimmte Daten auch nach Wegfall des ursprüngliches Zwecks zu speichern, zum Beispiel zu Zwecken der Buchführung.</p>
+        <p>Sollten Sie die Löschung Ihrer Daten wünschen oder die Einwilligung zur Datenverarbeitung widerrufen, werden die Daten so rasch wie möglich und soweit keine Pflicht zur Speicherung besteht, gelöscht.</p>
+        <p>Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir Sie weiter unten, sofern wir weitere Informationen dazu haben.</p>
+        <h2 id="rechte-dsgvo" class="adsimple-112054380">Rechte laut Datenschutz-Grundverordnung</h2>
+        <p>Gemäß Artikel 13, 14 DSGVO informieren wir Sie über die folgenden Rechte, die Ihnen zustehen, damit es zu einer fairen und transparenten Verarbeitung von Daten kommt:</p>
+        <ul class="adsimple-112054380">
+        <li class="adsimple-112054380">Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten von Ihnen verarbeiten. Sollte das zutreffen, haben Sie Recht darauf eine Kopie der Daten zu erhalten und die folgenden Informationen zu erfahren:
+        <ul class="adsimple-112054380">
+        <li class="adsimple-112054380">zu welchem Zweck wir die Verarbeitung durchführen;</li>
+        <li class="adsimple-112054380">die Kategorien, also die Arten von Daten, die verarbeitet werden;</li>
+        <li class="adsimple-112054380">wer diese Daten erhält und wenn die Daten an Drittländer übermittelt werden, wie die Sicherheit garantiert werden kann;</li>
+        <li class="adsimple-112054380">wie lange die Daten gespeichert werden;</li>
+        <li class="adsimple-112054380">das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung der Verarbeitung und dem Widerspruchsrecht gegen die Verarbeitung;</li>
+        <li class="adsimple-112054380">dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu diesen Behörden finden Sie weiter unten);</li>
+        <li class="adsimple-112054380">die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;</li>
+        <li class="adsimple-112054380">ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet werden, um zu einem persönlichen Profil von Ihnen zu gelangen.</li>
+        </ul>
+        </li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was bedeutet, dass wir Daten richtig stellen müssen, falls Sie Fehler finden.</li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf Vergessenwerden“), was konkret bedeutet, dass Sie die Löschung Ihrer Daten verlangen dürfen.</li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der Verarbeitung, was bedeutet, dass wir die Daten nur mehr speichern dürfen aber nicht weiter verwenden.</li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 19 DSGVO das Recht auf Datenübertragbarkeit, was bedeutet, dass wir Ihnen auf Anfrage Ihre Daten in einem gängigen Format zur Verfügung stellen.</li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach Durchsetzung eine Änderung der Verarbeitung mit sich bringt.
+        <ul class="adsimple-112054380">
+        <li class="adsimple-112054380">Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e (öffentliches Interesse, Ausübung öffentlicher Gewalt) oder Artikel 6 Abs. 1 lit. f (berechtigtes Interesse) basiert, können Sie gegen die Verarbeitung Widerspruch einlegen. Wir prüfen danach so rasch wie möglich, ob wir diesem Widerspruch rechtlich nachkommen können.</li>
+        <li class="adsimple-112054380">Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach nicht mehr für Direktmarketing verwenden.</li>
+        <li class="adsimple-112054380">Werden Daten verwendet, um Profiling zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung widersprechen. Wir dürfen Ihre Daten danach nicht mehr für Profiling verwenden.</li>
+        </ul>
+        </li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung (zum Beispiel Profiling) beruhenden Entscheidung unterworfen zu werden.</li>
+        <li class="adsimple-112054380">Sie haben laut Artikel 77 DSGVO das Recht auf Beschwerde. Das heißt, Sie können sich jederzeit bei der Datenschutzbehörde beschweren, wenn Sie der Meinung sind, dass die Datenverarbeitung von personenbezogenen Daten gegen die DSGVO verstößt.</li>
+        </ul>
+        <p>
+        <strong class="adsimple-112054380">Kurz gesagt:</strong> Sie haben Rechte &#8211; zögern Sie nicht, die oben gelistete verantwortliche Stelle bei uns zu kontaktieren!</p>
+        <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche in sonst einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren. Diese ist für Österreich die Datenschutzbehörde, deren Website Sie unter <a class="adsimple-112054380" href="https://www.dsb.gv.at/?tid=112054380" target="_blank" rel="noopener">https://www.dsb.gv.at/</a> finden. In Deutschland gibt es für jedes Bundesland einen Datenschutzbeauftragten. Für nähere Informationen können Sie sich an die <a class="adsimple-112054380" href="https://www.bfdi.bund.de/DE/Home/home_node.html" target="_blank" rel="noopener">Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)</a> wenden. Für unser Unternehmen ist die folgende lokale Datenschutzbehörde zuständig:</p>
+        <h2 id="zahlungsanbieter-einleitung" class="adsimple-112054380">Zahlungsanbieter Einleitung</h2>
+        <table border="1" cellpadding="15">
+        <tbody>
+        <tr>
+        <td>
+        <strong class="adsimple-112054380">Zahlungsanbieter Datenschutzerklärung Zusammenfassung</strong>
+        <br />
+        &#x1f465; Betroffene: Besucher der Website<br />
+        &#x1f91d; Zweck: Ermöglichung und Optimierung des Zahlungsvorgangs auf unserer Website<br />
+        &#x1f4d3; Verarbeitete Daten: Daten wie etwa Name, Adresse, Bankdaten (Kontonummer, Kreditkartennummer, Passwörter, TANs usw.), IP-Adresse und Vertragsdaten<br />
+        Mehr Details dazu finden Sie beim jeweils eingesetzten Zahlungsanbieter-Tool.<br />
+        &#x1f4c5; Speicherdauer: abhängig vom verwendeten Zahlungsanbieter<br />
+        &#x2696;&#xfe0f; Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags)</td>
+        </tr>
+        </tbody>
+        </table>
+        <h3 class="adsimple-112054380">Was ist ein Zahlungsanbieter?</h3>
+        <p>Wir verwenden auf unserer Website Online-Zahlungssysteme, die uns und Ihnen ein sicheres und reibungsloses Bezahlverfahren ermöglichen. Dabei können unter anderem auch personenbezogene Daten an den jeweiligen Zahlungsanbieter gesendet, gespeichert und dort verarbeitet werden. Bei Zahlungsanbietern handelt es sich um Online-Zahlungssysteme, die es Ihnen ermöglichen eine Bestellung über Online-Banking durchzuführen. Dabei wird die Zahlungsabwicklung durch den von Ihnen gewählten Zahlungsanbieter durchgeführt. Wir erhalten anschließend eine Information über die getätigte Zahlung. Diese Methode kann jeder User nutzen, der ein aktives Online-Banking-Konto mit PIN und TAN hat. Es gibt kaum noch Banken, die solche Zahlungsmethoden nicht anbieten bzw. akzeptieren.</p>
+        <h3 class="adsimple-112054380">Warum verwenden wir Zahlungsanbieter auf unserer Website?</h3>
+        <p>Wir wollen natürlich mit unserer Website und unserem eingebundenen Onlineshop den bestmögliche Service bieten, damit Sie sich auf unserer Seite wohl fühlen und unsere Angebote nutzen. Wir wissen, dass Ihre Zeit kostbar ist und speziell Zahlungsabwicklungen schnell und reibungslos funktionieren müssen. Aus diesen Gründen bieten wir Ihnen diverse Zahlungsanbieter an. Sie können Ihren bevorzugten Zahlungsanbieter wählen und so in gewohnter Manier bezahlen.</p>
+        <h3 class="adsimple-112054380">Welche Daten werden verarbeitet?</h3>
+        <p>Welche Daten genau verarbeitet werden, hängt natürlich von dem jeweiligen Zahlungsanbieter ab. Doch grundsätzlich werden Daten wie Name, Adresse, Bankdaten (Kontonummer, Kreditkartennummer, Passwörter, TANs usw.) gespeichert. Dabei handelt es sich um notwendige Daten, um überhaupt eine Transaktion durchführen zu können. Zudem können auch etwaige Vertragsdaten und Userdaten, wie zum Beispiel wann Sie unsere Website besuchen, für welche Inhalte Sie sich interessieren oder welche Unterseiten Sie anklicken, gespeichert werden. Auch Ihre IP-Adresse und Informationen zu Ihrem verwendeten Computer werden von den meisten Zahlungsanbietern gespeichert.</p>
+        <p>Die Daten werden in der Regel auf den Servern der Zahlungsanbietern gespeichert und verarbeitet. Wir als Websitebetreiber erhalten diese Daten nicht. Wir werden nur darüber informiert, ob die Zahlung funktioniert hat oder nicht. Für Identitäts- und Bonitätsprüfungen kann es vorkommen, dass Zahlungsanbieter Daten an die entsprechende Stelle weiterleiten. Für alle Zahlungsgeschäfte gelten immer die Geschäfts- und Datenschutzgrundlagen des jeweiligen Anbieters. Schauen Sie sich daher bitte immer auch die Allgemeinen Geschäftsbedingen und die Datenschutzerklärung des Zahlungsanbieters an. Sie haben auch jederzeit das Recht beispielsweise Daten löschen oder korrigieren zu lassen. Bitte setzen Sie sich bezüglich Ihrer Rechte (Widerrufsrecht, Auskunftsrecht und Betroffenheitsrecht) mit dem jeweiligen Dienstanbieter in Verbindung.</p>
+        <h3 class="adsimple-112054380">
+        <span class="adsimple-112054380" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Wo und wie lange werden Daten gespeichert?&quot;}" data-sheets-userformat="{&quot;2&quot;:769,&quot;3&quot;:{&quot;1&quot;:0},&quot;11&quot;:4,&quot;12&quot;:0}">Dauer der Datenverarbeitung</span>
+        </h3>
+        <p>Über die Dauer der Datenverarbeitung informieren wir Sie weiter unten sofern wir weitere Informationen dazu haben. Generell verarbeiten wir personenbezogene Daten nur so lange wie es für die Bereitstellung unserer Dienstleistungen und Produkte unbedingt notwendig ist. Wenn es wie zum Beispiel im Fall von Buchhaltung gesetzlich vorgeschrieben ist, kann diese Speicherdauer auch überschritten werden. So bewahren wir zu einem Vertrag gehörige Buchungsbelege (Rechnungen, Vertragsurkunden, Kontoauszüge u.a.) 10 Jahre (§ 147 AO) sowie sonstige relevante Geschäftsunterlagen 6 Jahre (§ 247 HGB) nach Anfallen auf.</p>
+        <h3 class="adsimple-112054380">Widerspruchsrecht</h3>
+        <p>Sie haben immer das Recht auf Auskunft, Berichtigung und Löschung Ihrer personenbezogenen Daten. Bei Fragen können Sie auch jederzeit Verantwortliche des verwendeten Zahlungsanbieter kontaktieren. Kontaktdaten finden Sie entweder in unserer spezifischen Datenschutzerklärung oder auf der Website des entsprechenden Zahlungsanbieters.</p>
+        <p>Cookies, die Zahlungsanbieter für ihre Funktionen verwenden, können Sie in Ihrem Browser löschen, deaktivieren oder verwalten. Je nachdem welchen Browser Sie verwenden, funktioniert dies auf unterschiedliche Art und Weise. Bitte beachten Sie aber, dass dann eventuell der Zahlungsvorgang nicht mehr funktioniert.</p>
+        <h3 class="adsimple-112054380">Rechtsgrundlage</h3>
+        <p>Wir bieten also zur Abwicklung von vertraglichen bzw. rechtlichen Beziehungen <strong class="adsimple-112054380">(Art. 6 Abs. 1 lit. b DSGVO)</strong>
+        <strong class="adsimple-112054380"> </strong>neben den herkömmlichen Bank-/Kreditinstitutionen auch andere Zahlungsdienstleister an. In den Datenschutzerklärungen der einzelnen Zahlungsanbietern (wie zum Beispiel <span class="adsimple-112054380" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Amazon Payments&quot;}" data-sheets-userformat="{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}">Amazon Payments</span>, <span class="adsimple-112054380" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Apple Pay&quot;}" data-sheets-userformat="{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}">Apple Pay</span> oder <span class="adsimple-112054380" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Discover&quot;}" data-sheets-userformat="{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}">Discover</span>) wird Ihnen ein genauer Überblick über die Datenverarbeitung und Datenspeicherung geboten. Zudem können Sie sich bei Fragen zu datenschutzrelevanten Themen stets an die Verantwortlichen richten.</p>
+        <p>Informationen zu den speziellen Zahlungsanbietern erfahren Sie &#8211; sofern vorhanden &#8211; in den folgenden Abschnitten.</p>
+        <h2 id="paypal-datenschutzerklaerung" class="adsimple-112054380">PayPal Datenschutzerklärung</h2>
+        <p>Wir nutzen auf unserer Website den Online-Bezahldienst PayPal. Dienstanbieter ist das amerikanische Unternehmen PayPal Inc. Für den europäischen Raum ist das Unternehmen PayPal Europe (S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg) verantwortlich.</p>
+        <p>PayPal verarbeitet Daten von Ihnen u.a. auch in den USA. Wir weisen darauf hin, dass nach Meinung des Europäischen Gerichtshofs derzeit kein angemessenes Schutzniveau für den Datentransfer in die USA besteht. Dies kann mit verschiedenen Risiken für die Rechtmäßigkeit und Sicherheit der Datenverarbeitung einhergehen.</p>
+        <p>Als Grundlage der Datenverarbeitung bei Empfängern mit Sitz in Drittstaaten (außerhalb der Europäischen Union, Island, Liechtenstein, Norwegen, also insbesondere in den USA) oder einer Datenweitergabe dorthin verwendet PayPal sogenannte Standardvertragsklauseln (= Art. 46. Abs. 2 und 3 DSGVO). Standardvertragsklauseln (Standard Contractual Clauses – SCC) sind von der EU-Kommission bereitgestellte Mustervorlagen und sollen sicherstellen, dass Ihre Daten auch dann den europäischen Datenschutzstandards entsprechen, wenn diese in Drittländer (wie beispielsweise in die USA) überliefert und dort gespeichert werden. Durch diese Klauseln verpflichtet sich PayPal, bei der Verarbeitung Ihrer relevanten Daten, das europäische Datenschutzniveau einzuhalten, selbst wenn die Daten in den USA gespeichert, verarbeitet und verwaltet werden. Diese Klauseln basieren auf einem Durchführungsbeschluss der EU-Kommission. Sie finden den Beschluss und die entsprechenden Standardvertragsklauseln u.a. hier: <a class="adsimple-112054380" href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de" target="_blank" rel="follow noopener">https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de</a>
+        </p>
+        <p>Mehr Informationen zu den Standardvertragsklauseln und über die Daten, die durch die Verwendung von PayPal Marketing Solutions verarbeitet werden, erfahren Sie in der Privacy Policy auf <a class="adsimple-112054380" href="https://www.paypal.com/c2/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener">https://www.paypal.com/c2/webapps/mpp/ua/privacy-full</a>.</p>
+        <p>Alle Texte sind urheberrechtlich geschützt.</p>
+        <p style="margin-top:15px">Quelle: Erstellt mit dem <a href="https://www.adsimple.at/datenschutz-generator/" title="Datenschutz Generator von AdSimple für Österreich">Datenschutz Generator</a> von AdSimple</p>
+
+      </div><!--//info-->
+    </div><!--//donate-inner-->
+  </div><!--//container-->
+</section><!--//how-->
+
+<!-- ******CONTACT****** -->
+<section id="contact" class="contact section has-pattern">
+  <div class="container">
+    <div class="contact-inner">
+      <h2 class="title  text-center">Contact</h2>
+      <div class="text-center"><a href="{{ site.org_main_website_address }}"><img src="assets/img/embassy_logo.jpg" class="img-fluid rounded mx-auto d-block"></a></div>
+      <address class="text-center">
+        <strong>{{ site.org_name }}</strong><br>
+        {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{ site.org_address_suite }}<br>{% endif %}
+        {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{% endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
+        {% if site.org_phone %}
+        <abbr title="Phone">Tel:</abbr> {{ site.org_phone }}
+        {% endif %}<br>
+        {% if site.org_main_website_address %}
+        <a href="{{ site.org_main_website_address }}" target="_blank">{{ site.org_main_website_address }}</a>
+        {% endif %}
+      </address>
+      <div class="clearfix"></div>
+      <div class="info text-center">
+        <!--<h4 class="sub-title">Unsere Verbindung</h4>-->
+        <ul class="social-icons list-inline">
+        {% if site.twitter_username %}
+        <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        {% endif %}
+        {% if site.org_facebook_username %}
+        <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        {% endif %}
+        {% if site.instagram_username %}
+        <li><a href="http://instagram.com/{{ site.org_instagram_username }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        {% endif %}
+        {% if site.org_general_email_inbox %}
+        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
+        {% endif %}
+      </ul>
+      </div><!--//info-->
+    </div><!--//contact-inner-->
+  </div><!--//container-->
+</section><!--//contact-->
