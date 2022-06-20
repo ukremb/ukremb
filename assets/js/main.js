@@ -53,6 +53,8 @@ jQuery(document).ready(function($) {
   });
 });
 
+if(readCookie('cookie-notice-dismissed')=='true') {}
+
 // Render the PayPal button into #paypal-button-container
 paypal.Buttons({
     // Set up the transaction
