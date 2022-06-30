@@ -40,6 +40,12 @@
   background: linear-gradient(90deg, $color 0%, darken($color, 15%) 50%, $color 100%);
 }
 
+.promo {
+  background-image: url('assets/img/triangles.png'), url('assets/img/triangles-rotated.png');
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+}
+
 .contact h2 {
   color: $color-2 !important;
 }
