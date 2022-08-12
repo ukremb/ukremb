@@ -7,7 +7,7 @@ base_address: https://donate.ukremb.at
 
 #REQUIRED
 org_site_title: "#standwithukraine"
-org_site_title_second: ""
+org_site_title_second: "#standwithukraine"
 org_name: "Botschaft der Ukraine in der Republik Österreich"
 org_summary: > # Enter your summary on the next line. Be sure to indent by two spaces.
 
