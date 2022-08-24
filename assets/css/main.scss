@@ -43,6 +43,17 @@ body {
   background: transparent;
 }
 
+.header .main-nav .nav .nav-item a {
+  font-size: 22px;
+  color: #fff !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.header.navbar-fixed-top .main-nav .nav .nav-item a {
+  color: #0669b1 !important;
+}
+
 .promo {
   background-image: url('/assets/img/promo.svg');
   background-size: cover;
