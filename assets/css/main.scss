@@ -50,6 +50,10 @@ body {
   text-transform: uppercase;
 }
 
+.header .main-nav .nav .nav-item a:hover {
+  color: #00101b;
+}
+
 .header.navbar-fixed-top .main-nav .nav .nav-item a {
   color: #0669b1 !important;
 }
@@ -57,6 +61,7 @@ body {
 .promo {
   background-image: url('/assets/img/promo.svg');
   background-size: cover;
+  background-position: center;
 }
 
 .promo .title.slideInRight .highlight {
