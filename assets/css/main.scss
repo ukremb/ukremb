@@ -228,7 +228,14 @@ body {
     background-image: url('/assets/img/m_promo.svg');
     background-size: cover;
     background-position: center;
+    padding-top: 110px;
    }
+  .promo .top-title {
+    padding-bottom: 1.5em
+  }
+  .promo .top-title {
+    padding-top: 1.5em
+  }
 }
 
 @media only screen and (min-width: 300px) {
