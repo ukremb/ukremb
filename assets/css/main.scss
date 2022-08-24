@@ -39,7 +39,10 @@ body {
   overflow-x: hidden;
 }
 
-.promo,
+.promo {
+  background-image: url('/assets/img/promo.svg');
+}
+
 .contact {
   background: linear-gradient(90deg, $color 0%, darken($color, 15%) 50%, $color 100%);
 }
