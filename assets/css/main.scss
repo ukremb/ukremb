@@ -35,6 +35,10 @@
 // Insert custom css below this line
 //
 
+.body {
+  overflow: hidden;
+}
+
 .promo,
 .contact {
   background: linear-gradient(90deg, $color 0%, darken($color, 15%) 50%, $color 100%);
