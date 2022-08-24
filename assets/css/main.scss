@@ -41,18 +41,19 @@ body {
 
 .promo {
   background-image: url('/assets/img/promo.svg');
+  background-size: cover;
 }
 
 .promo .title .highlight {
-  color: #0669b1;
+  color: #0669b1 !important;
 }
 
-.btn-outline.scrollto {
+.btn-outline.btn-outline-medium.scrollto {
   border: 2px solid #0669b1;
   color: #0669b1;
 }
 
-.btn-outline.scrollto:hover {
+.btn-outline.btn-outline-medium.scrollto:hover {
   background-color: #0669b1;
   color: #efd100;
 }
