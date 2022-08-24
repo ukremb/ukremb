@@ -223,6 +223,13 @@ body {
   color: $color-2;
 }
 
+@media only screen and (max-width: 48em) {
+  .promo {
+    background-image: url('/assets/img/m_promo.svg');
+    background-size: cover;
+    background-position: center;
+   }
+}
 
 @media only screen and (min-width: 300px) {
   .promo img {
