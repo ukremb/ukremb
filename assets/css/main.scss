@@ -236,6 +236,16 @@ body {
   .promo .bottom-title {
     padding-top: 1.5em
   }
+  .header {
+    background: #0069b4;
+    z-index: 9999;
+  }
+  .nav-item {
+    margin: 0;
+  }
+  .header .main-nav .nav .nav-item a {
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 300px) {
