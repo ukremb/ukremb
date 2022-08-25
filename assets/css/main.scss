@@ -256,6 +256,9 @@ body {
     width: 40%;
     margin: 0 auto; 
   }
+  .header.navbar-fixed-top .main-nav .nav .nav-item.last {
+    border-bottom: 1px solid #ccc;
+  }
   .header .main-nav .nav .nav-item a {
     text-align: center;
   }
@@ -265,7 +268,7 @@ body {
   .header .main-nav button .icon-bar {
     background-color: #0669b1;
   }
-    .header.navbar-fixed-top .main-nav button {
+  .header.navbar-fixed-top .main-nav button {
     background: #0669b1;
   }
   .header.navbar-fixed-top .main-nav button .icon-bar {
@@ -273,6 +276,9 @@ body {
   }  
   .navbar-collapse {
     border-top: 1px solid #eee;
+  }
+  .header.navbar-fixed-top .navbar-collapse {
+    border-top: 1px solid #ccc;
   }
 }
 
