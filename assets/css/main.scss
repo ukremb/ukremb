@@ -265,6 +265,12 @@ body {
   .header .main-nav button .icon-bar {
     background-color: #0669b1;
   }
+    .header.navbar-fixed-top .main-nav button {
+    background: #0669b1;
+  }
+  .header.navbar-fixed-top .main-nav button .icon-bar {
+    background-color: #ffe73c;
+  }  
   .navbar-collapse {
     border-top: 1px solid #eee;
   }
