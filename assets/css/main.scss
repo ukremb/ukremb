@@ -70,12 +70,12 @@ body {
   color: #0669b1 !important;
 }
 
-.btn-outline.btn-outline-medium.scrollto {
+.btn-outline.btn-outline-medium {
   border: 2px solid #0669b1 !important;
   color: #0669b1 !important;
 }
 
-.btn-outline.btn-outline-medium.scrollto:hover {
+.btn-outline.btn-outline-medium:hover {
   background-color: #0669b1 !important;
   color: #efd100 !important;
 }
@@ -279,6 +279,9 @@ body {
   }
   .header.navbar-fixed-top .navbar-collapse {
     border-top: 1px solid #ccc;
+  }
+  .h2, h2 {
+    font-size: 1.5em;
   }
 }
 
