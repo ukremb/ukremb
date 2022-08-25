@@ -230,6 +230,9 @@ body {
 .contact a {
   color: $color-2;
 }
+.paypal-checkout-sandbox {
+  animation
+}
 
 @media only screen and (max-width: 48em) {
   .promo {
@@ -430,14 +433,16 @@ body {
   }
 }
 @keyframes hide-container {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
+            from {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                z-index: -1 !important;
+            }
+        }
