@@ -249,10 +249,25 @@ body {
     z-index: 9999;
   }
   .nav-item {
-    margin: 0 !important;
+    margin: 0 auto !important;
+  }
+  }
+  .header .main-nav .nav .nav-item.last {
+    border-bottom: 1px solid #eee;
+    width: 40%;
+    margin: 0 auto;
   }
   .header .main-nav .nav .nav-item a {
     text-align: center;
+  }
+  .header .main-nav button {
+    background: #ffe73c;
+  }
+  .header .main-nav button .icon-bar {
+    background-color: #0669b1;
+  }
+  .navbar-collapse {
+    border-top: 1px solid #eee;
   }
 }
 
