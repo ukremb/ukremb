@@ -166,8 +166,9 @@ body {
 .donate .form-heading {
   color: darken($color, 30%);
 }
-
-
+.donate .title {
+  margin-bottom: 0;
+}
 .donate .amount-selection {
   text-align: left;
 }
