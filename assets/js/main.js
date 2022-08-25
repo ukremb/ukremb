@@ -111,4 +111,5 @@ paypal.Buttons({
 
         });
     },
-}).render('#paypal-button-container');
+})paypal.Button.render( settings, '#paypal-button');
+
