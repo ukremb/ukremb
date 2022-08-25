@@ -230,9 +230,6 @@ body {
 .contact a {
   color: $color-2;
 }
-.paypal-checkout-sandbox {
-  animation
-}
 
 @media only screen and (max-width: 48em) {
   .promo {
@@ -442,6 +439,6 @@ body {
   }
   to {
     opacity: 0;
-    z-index: -1;
+    z-index: -1 !important;
   }
 }
