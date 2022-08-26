@@ -54,18 +54,23 @@ jQuery(document).ready(function($) {
 });
 
 // Render the PayPal button into #paypal-button-container
-        paypal.Buttons({
-
-            // Call your server to set up the transaction
-            createOrder: function(data, actions) {
-                return fetch('/demo/checkout/api/paypal/order/create/', {
-                    method: 'post'
-                }).then(function(res) {
-                    return res.json();
-                }).then(function(orderData) {
-                    return orderData.id;
-                });
-            },
+paypal.Buttons({
+    // Set up the transaction
+    createOrder: function(data, actions) {
+        var donation = jQuery(".amount-chooser .checkbutton:checked").size() ? jQuery(".amount-chooser .checkbutton:checked").val() : jQuery(".amount-chooser .textBox").val().replace(',', '.');
+        //console.log(donation);
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: donation
+                }
+            }],
+            shipping_type: 'PICKUP',
+            application_context: {
+              shipping_preference: 'NO_SHIPPING'
+            }
+        });
+    },
 
             // Call your server to finalize the transaction
             onApprove: function(data, actions) {
