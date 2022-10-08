@@ -221,12 +221,38 @@ body {
 	display: block;
   	width: 20%;
    	margin: 0 auto 35px;
+	animation: pulse-blue 3s infinite;
 }
 .donate-paypal-button:hover {
 	background: #efd100;
 	color: #0669b1;
 	text-decoration: none;
 	border: 2px solid #0669b1;
+	box-shadow: 0 0 0 0 rgb(255 177 66);
+   	animation: pulse-yellow 3s infinite;
+}
+
+@keyframes pulse-yellow {
+	0% {
+		box-shadow: 0 0 0 0 rgb(255 177 66 / 70%);
+	}
+	70% {
+		box-shadow: 0 0 50px 20px rgb(255 177 66 / 0%);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgb(255 177 66 / 0%);
+	}
+}
+@keyframes pulse-blue {
+	0% {
+		box-shadow: 0 0 0 0 rgb(30 100 176 / 70%);
+	}
+	70% {
+		box-shadow: 0 0 50px 20px rgb(30 100 176 / 0%);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgb(30 100 176 / 0%);
+	}
 }
 
 .features .form-inline {
