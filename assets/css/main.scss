@@ -213,15 +213,20 @@ body {
   background: #0669b1;
 	color: #efd100;
 	font-size: 18px;
-	padding: 8px 30px;
+	padding: 10px 30px;
 	border-radius: 5px;
 	font-weight: bold;
 	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+  	width: 20%;
+   	margin: 0 auto 35px;
 }
 .donate-paypal-button:hover {
 	background: #efd100;
 	color: #0669b1;
 	text-decoration: none;
+	border: 2px solid #0669b1;
 }
 
 .features .form-inline {
