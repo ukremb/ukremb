@@ -231,28 +231,49 @@ body {
 	box-shadow: 0 0 0 0 rgb(255 177 66);
    	animation: pulse-yellow 3s infinite;
 }
-
+@-webkit-keyframes pulse-yellow {
+0% {
+	box-shadow: 0 0 0 0 rgb(255 177 66 / 70%);
+}
+70% {
+	box-shadow: 0 0 50px 20px rgb(255 177 66 / 0%);
+}
+100% {
+	box-shadow: 0 0 0 0 rgb(255 177 66 / 0%);
+}
+}
 @keyframes pulse-yellow {
-	0% {
-		box-shadow: 0 0 0 0 rgb(255 177 66 / 70%);
-	}
-	70% {
-		box-shadow: 0 0 50px 20px rgb(255 177 66 / 0%);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgb(255 177 66 / 0%);
-	}
+0% {
+	box-shadow: 0 0 0 0 rgb(255 177 66 / 70%);
+}
+70% {
+	box-shadow: 0 0 50px 20px rgb(255 177 66 / 0%);
+}
+100% {
+	box-shadow: 0 0 0 0 rgb(255 177 66 / 0%);
+}
+}
+@-webkit-keyframes pulse-blue {
+0% {
+	box-shadow: 0 0 0 0 rgb(30 100 176 / 70%);
+}
+70% {
+	box-shadow: 0 0 50px 20px rgb(30 100 176 / 0%);
+}
+100% {
+	box-shadow: 0 0 0 0 rgb(30 100 176 / 0%);
+}
 }
 @keyframes pulse-blue {
-	0% {
-		box-shadow: 0 0 0 0 rgb(30 100 176 / 70%);
-	}
-	70% {
-		box-shadow: 0 0 50px 20px rgb(30 100 176 / 0%);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgb(30 100 176 / 0%);
-	}
+0% {
+	box-shadow: 0 0 0 0 rgb(30 100 176 / 70%);
+}
+70% {
+	box-shadow: 0 0 50px 20px rgb(30 100 176 / 0%);
+}
+100% {
+	box-shadow: 0 0 0 0 rgb(30 100 176 / 0%);
+}
 }
 
 .features .form-inline {
